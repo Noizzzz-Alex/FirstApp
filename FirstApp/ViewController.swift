@@ -22,9 +22,9 @@ final class ViewController: UIViewController {
     private let button: UIButton = {
         let button = UIButton()
         button.setTitle("Go to the new screen", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
+        button.setTitleColor(.yellow, for: .normal)
         button.setTitleColor(.green, for: .highlighted)
-        button.backgroundColor = .gray
+        button.backgroundColor = .black
         return button
     }()
     
