@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1059BE622B16156100D8162D /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059BE612B16156100D8162D /* ImageViewController.swift */; };
+		1059BE652B16475C00D8162D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059BE642B16475C00D8162D /* NetworkService.swift */; };
+		1059BE682B164D6A00D8162D /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059BE672B164D6A00D8162D /* Cities.swift */; };
 		1072E51E2B056134007AF277 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072E51D2B056134007AF277 /* NewViewController.swift */; };
 		1072FFC52B10EB2C00B8BFB4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072FFC42B10EB2C00B8BFB4 /* CustomButton.swift */; };
 		1072FFCC2B10F79900B8BFB4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072FFCB2B10F79900B8BFB4 /* TableViewController.swift */; };
-		1072FFCE2B10FD9700B8BFB4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072FFCD2B10FD9700B8BFB4 /* File.swift */; };
 		1072FFD12B110B6900B8BFB4 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072FFD02B110B6900B8BFB4 /* CustomTableViewCell.swift */; };
 		1072FFD32B111B3300B8BFB4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072FFD22B111B3300B8BFB4 /* CollectionViewController.swift */; };
-		1072FFD62B111E6B00B8BFB4 /* CustomProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072FFD52B111E6B00B8BFB4 /* CustomProtocols.swift */; };
 		1072FFD82B11246500B8BFB4 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072FFD72B11246500B8BFB4 /* CustomCollectionViewCell.swift */; };
 		10E02AC02AFD501100B04A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E02ABF2AFD501100B04A08 /* AppDelegate.swift */; };
 		10E02AC22AFD501100B04A08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E02AC12AFD501100B04A08 /* SceneDelegate.swift */; };
@@ -42,13 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1059BE612B16156100D8162D /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		1059BE642B16475C00D8162D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1059BE672B164D6A00D8162D /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 		1072E51D2B056134007AF277 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		1072FFC42B10EB2C00B8BFB4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		1072FFCB2B10F79900B8BFB4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		1072FFCD2B10FD9700B8BFB4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		1072FFD02B110B6900B8BFB4 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		1072FFD22B111B3300B8BFB4 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		1072FFD52B111E6B00B8BFB4 /* CustomProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProtocols.swift; sourceTree = "<group>"; };
 		1072FFD72B11246500B8BFB4 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		10E02ABC2AFD501100B04A08 /* FirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E02ABF2AFD501100B04A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,12 +90,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1059BE632B16473000D8162D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1059BE642B16475C00D8162D /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1059BE662B164D5100D8162D /* SupportedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1059BE672B164D6A00D8162D /* Cities.swift */,
+			);
+			path = SupportedFiles;
+			sourceTree = "<group>";
+		};
 		1072FFB82B10CA8F00B8BFB4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				1059BE662B164D5100D8162D /* SupportedFiles */,
 				1072FFC02B10E00800B8BFB4 /* Controllers */,
 				1072FFBF2B10DFEC00B8BFB4 /* Extensions */,
-				1072FFBE2B10DFDC00B8BFB4 /* Views */,
 				1072FFBD2B10DFCB00B8BFB4 /* Delegates */,
 				1072FFBC2B10CB2200B8BFB4 /* Modules */,
 			);
@@ -111,10 +129,10 @@
 		1072FFBC2B10CB2200B8BFB4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1059BE632B16473000D8162D /* Services */,
 				1072FFD42B111E4D00B8BFB4 /* Protocols */,
 				1072FFCF2B110B2C00B8BFB4 /* CustomView */,
 				1072FFC62B10F3B200B8BFB4 /* Obj-C Func */,
-				1072FFC32B10EAD000B8BFB4 /* Images */,
 				1072FFC22B10EA8F00B8BFB4 /* Labels */,
 				1072FFC12B10EA6F00B8BFB4 /* Buttons */,
 			);
@@ -130,13 +148,6 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
-		1072FFBE2B10DFDC00B8BFB4 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		1072FFBF2B10DFEC00B8BFB4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				1072E51D2B056134007AF277 /* NewViewController.swift */,
+				1059BE612B16156100D8162D /* ImageViewController.swift */,
 				10E02AC32AFD501100B04A08 /* ViewController.swift */,
 				1072FFCB2B10F79900B8BFB4 /* TableViewController.swift */,
 				1072FFD22B111B3300B8BFB4 /* CollectionViewController.swift */,
@@ -170,17 +182,9 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
-		1072FFC32B10EAD000B8BFB4 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		1072FFC62B10F3B200B8BFB4 /* Obj-C Func */ = {
 			isa = PBXGroup;
 			children = (
-				1072FFCD2B10FD9700B8BFB4 /* File.swift */,
 			);
 			path = "Obj-C Func";
 			sourceTree = "<group>";
@@ -197,7 +201,6 @@
 		1072FFD42B111E4D00B8BFB4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				1072FFD52B111E6B00B8BFB4 /* CustomProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -379,14 +382,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1072FFD62B111E6B00B8BFB4 /* CustomProtocols.swift in Sources */,
+				1059BE682B164D6A00D8162D /* Cities.swift in Sources */,
+				1059BE652B16475C00D8162D /* NetworkService.swift in Sources */,
+				1059BE622B16156100D8162D /* ImageViewController.swift in Sources */,
 				1072FFD32B111B3300B8BFB4 /* CollectionViewController.swift in Sources */,
 				10E02AC42AFD501100B04A08 /* ViewController.swift in Sources */,
 				10E02AC02AFD501100B04A08 /* AppDelegate.swift in Sources */,
 				1072FFD12B110B6900B8BFB4 /* CustomTableViewCell.swift in Sources */,
 				1072FFCC2B10F79900B8BFB4 /* TableViewController.swift in Sources */,
 				10E02AC22AFD501100B04A08 /* SceneDelegate.swift in Sources */,
-				1072FFCE2B10FD9700B8BFB4 /* File.swift in Sources */,
 				1072E51E2B056134007AF277 /* NewViewController.swift in Sources */,
 				1072FFC52B10EB2C00B8BFB4 /* CustomButton.swift in Sources */,
 				1072FFD82B11246500B8BFB4 /* CustomCollectionViewCell.swift in Sources */,
