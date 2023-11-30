@@ -13,6 +13,7 @@ final class ImageViewController: UIViewController {
     init(image: UIImage) {
         super.init(nibName: nil, bundle: nil)
         imageView.image = image
+        
     }
 
     required init?(coder: NSCoder) {
@@ -23,6 +24,8 @@ final class ImageViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupView()
+        
+        
     }
 
     private func setupView() {

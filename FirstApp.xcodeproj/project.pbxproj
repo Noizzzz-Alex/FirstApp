@@ -10,6 +10,12 @@
 		1059BE622B16156100D8162D /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059BE612B16156100D8162D /* ImageViewController.swift */; };
 		1059BE652B16475C00D8162D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059BE642B16475C00D8162D /* NetworkService.swift */; };
 		1059BE682B164D6A00D8162D /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059BE672B164D6A00D8162D /* Cities.swift */; };
+		1059BE6A2B16659500D8162D /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059BE692B16659500D8162D /* News.swift */; };
+		1059BE6C2B1670E000D8162D /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059BE6B2B1670E000D8162D /* Places.swift */; };
+		1059BE6E2B16774900D8162D /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059BE6D2B16774900D8162D /* Movies.swift */; };
+		1059BE722B167E6C00D8162D /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059BE712B167E6C00D8162D /* UIImageView+Extensions.swift */; };
+		1059BE742B16877B00D8162D /* DogImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059BE732B16877B00D8162D /* DogImageModel.swift */; };
+		1059BE762B169C3600D8162D /* WebkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1059BE752B169C3600D8162D /* WebkitViewController.swift */; };
 		1072E51E2B056134007AF277 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072E51D2B056134007AF277 /* NewViewController.swift */; };
 		1072FFC52B10EB2C00B8BFB4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072FFC42B10EB2C00B8BFB4 /* CustomButton.swift */; };
 		1072FFCC2B10F79900B8BFB4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072FFCB2B10F79900B8BFB4 /* TableViewController.swift */; };
@@ -46,6 +52,12 @@
 		1059BE612B16156100D8162D /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		1059BE642B16475C00D8162D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		1059BE672B164D6A00D8162D /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		1059BE692B16659500D8162D /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		1059BE6B2B1670E000D8162D /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		1059BE6D2B16774900D8162D /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		1059BE712B167E6C00D8162D /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		1059BE732B16877B00D8162D /* DogImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageModel.swift; sourceTree = "<group>"; };
+		1059BE752B169C3600D8162D /* WebkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebkitViewController.swift; sourceTree = "<group>"; };
 		1072E51D2B056134007AF277 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		1072FFC42B10EB2C00B8BFB4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		1072FFCB2B10F79900B8BFB4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -98,18 +110,22 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		1059BE662B164D5100D8162D /* SupportedFiles */ = {
+		1059BE662B164D5100D8162D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				1059BE672B164D6A00D8162D /* Cities.swift */,
+				1059BE692B16659500D8162D /* News.swift */,
+				1059BE6B2B1670E000D8162D /* Places.swift */,
+				1059BE6D2B16774900D8162D /* Movies.swift */,
+				1059BE732B16877B00D8162D /* DogImageModel.swift */,
 			);
-			path = SupportedFiles;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1072FFB82B10CA8F00B8BFB4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				1059BE662B164D5100D8162D /* SupportedFiles */,
+				1059BE662B164D5100D8162D /* Models */,
 				1072FFC02B10E00800B8BFB4 /* Controllers */,
 				1072FFBF2B10DFEC00B8BFB4 /* Extensions */,
 				1072FFBD2B10DFCB00B8BFB4 /* Delegates */,
@@ -151,6 +167,7 @@
 		1072FFBF2B10DFEC00B8BFB4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1059BE712B167E6C00D8162D /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -161,6 +178,7 @@
 				1072E51D2B056134007AF277 /* NewViewController.swift */,
 				1059BE612B16156100D8162D /* ImageViewController.swift */,
 				10E02AC32AFD501100B04A08 /* ViewController.swift */,
+				1059BE752B169C3600D8162D /* WebkitViewController.swift */,
 				1072FFCB2B10F79900B8BFB4 /* TableViewController.swift */,
 				1072FFD22B111B3300B8BFB4 /* CollectionViewController.swift */,
 			);
@@ -385,14 +403,20 @@
 				1059BE682B164D6A00D8162D /* Cities.swift in Sources */,
 				1059BE652B16475C00D8162D /* NetworkService.swift in Sources */,
 				1059BE622B16156100D8162D /* ImageViewController.swift in Sources */,
+				1059BE6C2B1670E000D8162D /* Places.swift in Sources */,
 				1072FFD32B111B3300B8BFB4 /* CollectionViewController.swift in Sources */,
+				1059BE6E2B16774900D8162D /* Movies.swift in Sources */,
 				10E02AC42AFD501100B04A08 /* ViewController.swift in Sources */,
 				10E02AC02AFD501100B04A08 /* AppDelegate.swift in Sources */,
 				1072FFD12B110B6900B8BFB4 /* CustomTableViewCell.swift in Sources */,
 				1072FFCC2B10F79900B8BFB4 /* TableViewController.swift in Sources */,
+				1059BE742B16877B00D8162D /* DogImageModel.swift in Sources */,
 				10E02AC22AFD501100B04A08 /* SceneDelegate.swift in Sources */,
 				1072E51E2B056134007AF277 /* NewViewController.swift in Sources */,
 				1072FFC52B10EB2C00B8BFB4 /* CustomButton.swift in Sources */,
+				1059BE762B169C3600D8162D /* WebkitViewController.swift in Sources */,
+				1059BE6A2B16659500D8162D /* News.swift in Sources */,
+				1059BE722B167E6C00D8162D /* UIImageView+Extensions.swift in Sources */,
 				1072FFD82B11246500B8BFB4 /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

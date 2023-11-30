@@ -27,6 +27,14 @@ final class ViewController: UIViewController {
         button.backgroundColor = .black
         return button
     }()
+    private let buttonGoToWebKit: UIButton = {
+        let button = UIButton()
+        button.setTitle("Go to WebKit", for: .normal)
+        button.setTitleColor(.yellow, for: .normal)
+        button.setTitleColor(.green, for: .highlighted)
+        button.backgroundColor = .black
+        return button
+    }()
     
     private let buttonChangeBackgroundColor: UIButton = {
         let button = UIButton()
@@ -46,18 +54,22 @@ final class ViewController: UIViewController {
 
         button.addTarget(self, action: #selector(goToNextScreen), for: .touchUpInside)
         buttonChangeBackgroundColor.addTarget(self, action: #selector(changeBackgroundColor), for: .touchUpInside)
+        buttonGoToWebKit.addTarget(self, action: #selector(goToWebScreen), for: .touchUpInside)
+        
     }
 
     private func setupView() {
         view.addSubview(label)
         view.addSubview(button)
         view.addSubview(buttonChangeBackgroundColor)
+        view.addSubview(buttonGoToWebKit)
     }
 
     private func setupConstraint() {
         label.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false
         buttonChangeBackgroundColor.translatesAutoresizingMaskIntoConstraints = false
+        buttonGoToWebKit.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
             // MARK: label
@@ -79,10 +91,18 @@ final class ViewController: UIViewController {
             buttonChangeBackgroundColor.leadingAnchor.constraint(equalTo: button.leadingAnchor),
             buttonChangeBackgroundColor.trailingAnchor.constraint(equalTo: button.trailingAnchor),
             buttonChangeBackgroundColor.heightAnchor.constraint(equalTo: button.heightAnchor),
-            buttonChangeBackgroundColor.widthAnchor.constraint(equalTo: button.widthAnchor)
+            buttonChangeBackgroundColor.widthAnchor.constraint(equalTo: button.widthAnchor),
+            
+            //MARK: changeColorButton
+            buttonGoToWebKit.topAnchor.constraint(equalTo: buttonChangeBackgroundColor.bottomAnchor,constant: 20),
+            buttonGoToWebKit.leadingAnchor.constraint(equalTo: button.leadingAnchor),
+            buttonGoToWebKit.trailingAnchor.constraint(equalTo: button.trailingAnchor),
+            buttonGoToWebKit.heightAnchor.constraint(equalTo: button.heightAnchor),
+            buttonGoToWebKit.widthAnchor.constraint(equalTo: button.widthAnchor)
             
         ])
     }
+    
 
     
 }
@@ -96,6 +116,10 @@ private extension ViewController{
         isColorChanged.toggle()
         view.backgroundColor = isColorChanged ? .darkGray : .white
     }
+    @objc  func goToWebScreen() {
+        navigationController?.pushViewController(WebkitViewController(), animated: true)
+    }
+    
 }
 
 #Preview {

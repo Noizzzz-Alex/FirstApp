@@ -9,9 +9,9 @@ import Foundation
 
 struct City: Decodable {
     let name: String
-    let timeZone: String
+    let timezone: String
     let coords: Coodinates
-    let currancy: String
+    let currency: String
 }
 struct Coodinates: Decodable{
     let lat: Double

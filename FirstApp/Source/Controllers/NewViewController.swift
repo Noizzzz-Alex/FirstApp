@@ -119,7 +119,7 @@ class NewViewController: UIViewController {
             // привязывает ширину синего к красному, ширина будет одинаковая
             blueView.widthAnchor.constraint(equalTo: redView.widthAnchor),
             
-            // отступаем от центра view
+            // отступаем от центра View
             blueView.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 3),
             
             // MARK: grayView
@@ -189,16 +189,6 @@ class NewViewController: UIViewController {
             navigationController?.pushViewController(CollectionViewController(collectionViewLayout: UICollectionViewLayout()), animated: true)
         }
     }
-
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-     }
-     */
 
 
 #Preview {
