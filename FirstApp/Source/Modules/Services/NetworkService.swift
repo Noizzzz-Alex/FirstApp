@@ -4,12 +4,17 @@
 //
 //  Created by Александр Харлампов on 28.11.2023.
 //
-
 import Foundation
+
+protocol NetworkServiceDelegate: AnyObject {
+    func updateCities(cities: [City])
+}
+
 final class NetworkService {
+    weak var delegate: NetworkServiceDelegate?
     private let session = URLSession.shared
 
-    func fetchData() {
+    func getCities(completion: @escaping ([City]) -> Void) {
         guard let url =
             URL(
                 string: "https://kudago.com/public-api/v1.2/locations/?lang=ru&fields=timezone,name,currency,coords")
@@ -21,7 +26,7 @@ final class NetworkService {
 
             do {
                 let cities = try JSONDecoder().decode([City].self, from: data)
-                print(cities)
+                completion(cities)
             } catch {
                 print(error) // здесь будет выводится ошибки декодирования а не те ошибки что придут из сети
             }
@@ -35,6 +40,25 @@ final class NetworkService {
             print(data ?? "Error receiving data")
         }
         .resume()
+    }
+    //метод через делегат
+    func getCitiesDelegate() {
+        guard let url =
+            URL(
+                string: "https://kudago.com/public-api/v1.2/locations/?lang=ru&fields=timezone,name,currency,coords")
+        else {
+            return
+        }
+        session.dataTask(with: url) { [weak self] data, _, error in
+            guard let data else { return } // проверяем что пришли хоть какие то данные
+            
+            do {
+                let cities = try JSONDecoder().decode([City].self, from: data)
+                self?.delegate?.updateCities(cities: cities)
+            } catch {
+                print(error) // здесь будет выводится ошибки декодирования а не те ошибки что придут из сети
+            }
+        }.resume()
     }
 
     func getActualNews() {
@@ -68,6 +92,7 @@ final class NetworkService {
             }
         }.resume()
     }
+
     func getMovies() {
         guard let url = URL(string: "https://kudago.com/public-api/v1.4/movies/?lang=&fields=title,site_url,body_text,country,year,imdb_rating") else {
             return

@@ -8,5 +8,5 @@
 import Foundation
 
 struct DogImageModel: Decodable {
-    let url: String
+    public var url: String
 }

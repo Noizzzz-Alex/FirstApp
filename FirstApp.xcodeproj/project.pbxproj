@@ -29,6 +29,7 @@
 		10E02AD72AFD501200B04A08 /* FirstAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E02AD62AFD501200B04A08 /* FirstAppTests.swift */; };
 		10E02AE12AFD501200B04A08 /* FirstAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E02AE02AFD501200B04A08 /* FirstAppUITests.swift */; };
 		10E02AE32AFD501200B04A08 /* FirstAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E02AE22AFD501200B04A08 /* FirstAppUITestsLaunchTests.swift */; };
+		10EFBBD92B20D490004CE1C6 /* FuncLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EFBBD82B20D490004CE1C6 /* FuncLabels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		10E02ADC2AFD501200B04A08 /* FirstAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E02AE02AFD501200B04A08 /* FirstAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITests.swift; sourceTree = "<group>"; };
 		10E02AE22AFD501200B04A08 /* FirstAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		10EFBBD82B20D490004CE1C6 /* FuncLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncLabels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 		1072FFC22B10EA8F00B8BFB4 /* Labels */ = {
 			isa = PBXGroup;
 			children = (
+				10EFBBD82B20D490004CE1C6 /* FuncLabels.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10EFBBD92B20D490004CE1C6 /* FuncLabels.swift in Sources */,
 				1059BE682B164D6A00D8162D /* Cities.swift in Sources */,
 				1059BE652B16475C00D8162D /* NetworkService.swift in Sources */,
 				1059BE622B16156100D8162D /* ImageViewController.swift in Sources */,
