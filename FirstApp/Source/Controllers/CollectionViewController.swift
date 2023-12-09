@@ -39,7 +39,13 @@ class CollectionViewController: UICollectionViewController {
         guard let cell = cell as? CustomCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.tap = {[weak self] image in self?.navigationController?.pushViewController(ImageViewController(image: image), animated: true)
+        cell.tap = {[weak self] image in
+            let transition = CATransition()
+            transition.duration = 1
+            transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+            transition.type = .fade
+            self?.navigationController?.view.layer.add(transition, forKey: nil)
+            self?.navigationController?.pushViewController(ImageViewController(image: image), animated: false)
         }
         
         

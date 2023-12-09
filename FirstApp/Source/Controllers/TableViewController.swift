@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController,NetworkServiceDelegate {
+class TableViewController: UITableViewController {
     func updateCities(cities: [City]) {
         self.cities = cities
         DispatchQueue.main.async {
@@ -21,15 +21,15 @@ class TableViewController: UITableViewController,NetworkServiceDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        networkService.delegate = self
+//        networkService.delegate = self
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
-        networkService.getCitiesDelegate()
-//        networkService.getCities { [weak self] cities in
-//            self?.cities = cities
-//            DispatchQueue.main.async {
-//                self?.tableView.reloadData()
-//            }
-//        }
+//        networkService.getCitiesDelegate()
+        networkService.getCities { [weak self] cities in
+            self?.cities = cities
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
         //networkService.getCatError(errorCode: 403)
         //networkService.getActualNews()
         //networkService.getPlaces()
