@@ -8,6 +8,7 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    
     func updateCities(cities: [City]) {
         self.cities = cities
         DispatchQueue.main.async {
@@ -18,23 +19,28 @@ class TableViewController: UITableViewController {
     
     let networkService = NetworkService()
     private var cities = [City]()
+    var dataService = DataService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 //        networkService.delegate = self
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
 //        networkService.getCitiesDelegate()
+        
+        cities = dataService.getData()
+        
+        
         networkService.getCities { [weak self] cities in
             self?.cities = cities
+            self?.dataService.putData(cities: cities)
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
         }
-        //networkService.getCatError(errorCode: 403)
-        //networkService.getActualNews()
-        //networkService.getPlaces()
-        //networkService.getMovies()
     }
+    
+    
+    
     // MARK: - Table view data source
 
 

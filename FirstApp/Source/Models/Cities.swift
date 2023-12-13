@@ -10,10 +10,10 @@ import Foundation
 struct City: Decodable {
     let name: String
     let timezone: String
-    let coords: Coodinates
+    let coords: Coordinates
     let currency: String
 }
-struct Coodinates: Decodable{
+struct Coordinates: Decodable{
     let lat: Double
     let lon: Double
 }
